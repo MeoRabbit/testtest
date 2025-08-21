@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rain + Lightning + Bio</title>
+  <link rel="stylesheet" href="./common/css/style.css"> <!-- фон, дождь, молния -->
+  <link rel="stylesheet" href="./common/css/container.css"> <!-- профиль -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.3/dist/pixi.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pixi-particles@3.2.0/dist/pixi-particles.min.js"></script>
+</head>
+<body>
+  <div class="bg">
+    <!-- фон -->
+    <div class="bg__image" style="background-image:url('./common/img/bg.jpg');"></div>
+
+    <!-- дождь -->
+    <div class="bg__rain"><canvas id="stage"></canvas></div>
+
+    <!-- молния -->
+    <div class="bg__flash"></div>
+
+    <!-- Био-профиль -->
+    <div class="profile-container">
+      <div class="banner"></div>
+      <div class="profile-header">
+        <div class="avatar"></div>
+        <div class="nickname">MQVON</div>
+      </div>
+      <div class="info">
+        <p>Боец</p>
+        <p>ID: <strong>1688880140</strong></p>
+        <p>USERNAME: @MQVON</p>
+        <p><i>isizisiz</i></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- дождь -->
+  <script src="./common/js/particle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.setAttribute('data-loaded', '1');
+    });
+  </script>
+</body>
+</html>
