@@ -1,0 +1,66 @@
+/* центрируем контейнер по вертикали и горизонтали */
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* чтобы занять всю высоту */
+  flex-direction: column;
+}
+
+.profile-container {
+  position: relative;
+  z-index: 10; /* поверх дождя и молнии */
+  width: 360px;                 /* чуть меньше */
+  background: rgba(120, 0, 0, 0.25); /* тускло-красный, прозрачный */
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 12px;
+  text-align: center;
+  margin-top: 40px;             /* смещение чуть ниже центра */
+}
+
+/* баннер */
+.profile-container .banner {
+  width: 100%;
+  height: 90px;                 /* ниже и меньше */
+  background: url("../img/banner.jpg") center/cover no-repeat;
+}
+
+/* аватар */
+.profile-container .avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  background: url("../img/avatar.jpg") center/cover no-repeat;
+  margin-top: -35px;            /* половина высоты аватарки */
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* ник */
+.profile-container .nickname {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 6px 0;
+  color: #ff3333;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
+/* инфо */
+.profile-container .info {
+  padding: 0 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(200, 0, 0, 0.7);
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.6); /* тускло-красный текст */
+}
+
+/* чёрная подложка под текстом */
+.profile-container .info-box {
+  background: rgba(0,0,0,0.6);
+  padding: 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
